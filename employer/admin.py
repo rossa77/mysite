@@ -23,5 +23,9 @@ class EmployerAdmin(admin.ModelAdmin):
             return obj.owner == request.user
         return super().has_change_permission(request, obj)
 
-admin.site.register(Employer,EmployerAdmin)
+    def has_view_permission(self, request, obj=None):
+        return True
+    def has_module_permission(self, request, obj=None):
+        return True
 
+admin.site.register(Employer,EmployerAdmin)
