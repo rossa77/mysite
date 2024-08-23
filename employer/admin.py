@@ -25,5 +25,3 @@ class EmployerAdmin(admin.ModelAdmin):
 
 admin.site.register(Employer,EmployerAdmin)
 
-
-
