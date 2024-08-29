@@ -20,9 +20,8 @@ ROLE_CHOICES = [
 
 class User(AbstractUser):
     role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='employer')
-
-    # def __str__(self):
-    #     return self.username
+    def __str__(self):
+        return self.username
 
 
 class Employer(models.Model):

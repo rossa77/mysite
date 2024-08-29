@@ -1,10 +1,13 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
-# from employer.admin import admin_site
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('job/', include("employer.urls")),
+    path('user/', include("job_seeker.urls")),
+
 ]
 
 if settings.DEBUG:
